@@ -47,5 +47,5 @@ This project is a React-based web application that allows users to calculate and
 
 2. Open your browser and navigate to http://localhost:3000.
 
-3. Input your options data in the table and click "Update Chart" to see the profit/loss chart and key   
+3. Input your options data in the table to see the profit/loss chart and key   
    metrics.
