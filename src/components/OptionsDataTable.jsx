@@ -1,5 +1,6 @@
 import React from "react";
 import { styled } from "goober";
+import { formatDate } from "../utils/utils";
 
 const Table = styled('table')`
   width: 100%;
@@ -29,7 +30,7 @@ const StyledSelect = styled('select')`
   box-sizing: border-box;
 `;
 const OptionsDataTable = ({ optionsData, handleInputChange }) => {
-
+    console.log('option data: ', optionsData);
     return (
         <Table>
             <thead>
@@ -87,7 +88,7 @@ const OptionsDataTable = ({ optionsData, handleInputChange }) => {
                         <TableCell>
                             <EditableInput
                                 type="date"
-                                value={option.expiration_date || '2024-12-31'}
+                                value={formatDate(option.expiration_date)}
                                 onChange={(e) => handleInputChange(index, 'expiration_date', e.target.value)}
                             />
                         </TableCell>

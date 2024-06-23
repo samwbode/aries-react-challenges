@@ -1,4 +1,4 @@
-import { calculateProfitLoss, generateDataPoints, calculateMetrics } from '../utils/utils';
+import { calculateProfitLoss, generateDataPoints, calculateMetrics, formatDate } from '../utils/utils';
 
 // Unit tests for calculateProfitLoss
 describe('calculateProfitLoss', () => {
@@ -89,5 +89,31 @@ describe('calculateProfitLoss', () => {
       expect(metrics.maxProfit).toBe(10);
       expect(metrics.maxLoss).toBe(-10);
       expect(metrics.breakEvenPoints).toEqual([100]);
+    });
+  });
+
+  describe('formatDate', () => {
+    it('should format the date correctly', () => {
+      const inputDate = "2025-12-17T00:00:00Z";
+      const expectedOutput = "2025-12-17";
+      expect(formatDate(inputDate)).toBe(expectedOutput);
+    });
+  
+    it('should handle different months and days correctly', () => {
+      const inputDate = "2024-01-05T00:00:00Z";
+      const expectedOutput = "2024-01-05";
+      expect(formatDate(inputDate)).toBe(expectedOutput);
+    });
+  
+    it('should handle single-digit months and days correctly', () => {
+      const inputDate = "2023-03-07T00:00:00Z";
+      const expectedOutput = "2023-03-07";
+      expect(formatDate(inputDate)).toBe(expectedOutput);
+    });
+  
+    it('should handle leap years correctly', () => {
+      const inputDate = "2024-02-29T00:00:00Z"; // 2024 is a leap year
+      const expectedOutput = "2024-02-29";
+      expect(formatDate(inputDate)).toBe(expectedOutput);
     });
   });
