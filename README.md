@@ -30,5 +30,22 @@ This project is a React-based web application that allows users to calculate and
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/samwbode/aries-react-challenge.git
-   cd aries-react-challenge
+   git clone https://github.com/samwbode/aries-react-challenges.git
+   cd aries-react-challenges
+
+2. Install dependencies:
+
+   ```sh
+   npm install
+
+## Usage
+
+1. Start the development server:
+
+   ```sh
+   npm start
+
+2. Open your browser and navigate to http://localhost:3000.
+
+3. Input your options data in the table and click "Update Chart" to see the profit/loss chart and key   
+   metrics.
